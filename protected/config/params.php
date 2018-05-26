@@ -17,4 +17,6 @@ return array(
     'currency' => 'SAR',
     'GoingStatus' => 2,
     'InterestedStatus' => 1,
+	'allowAutoDelete' => false,
+	'myWebsite' => 'http://freepout.com'
 );

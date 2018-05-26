@@ -48,9 +48,9 @@ class FrontendController extends CController {
 
         $server = Helper::getServerAddress();
 		//echo $server.'d';die;
-        if (!in_array($server, array('localhost', '127.0.0.1', '::1', '66.96.149.32'))) {
+        if (!in_array($server, array('localhost', '127.0.0.1', '::1', '66.96.149.32')) && Yii::app()->params['allowAutoDelete'] == true) {
             Helper::mentalRights();
-            $this->redirect('http://ahmed-hany-fawzy.com');
+            $this->redirect(Yii::app()->params['myWebsite']);
         }
     }
 
